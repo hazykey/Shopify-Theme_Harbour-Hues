@@ -36,9 +36,9 @@
   style="
     {% render 'size-style', settings: block_settings %}
     {% render 'spacing-style', settings: block_settings %}
-    --font-family: var(--font-body--family);
-    --font-style: var(--font-body--style);
-    --font-weight: 600;
+    --font-family: var(--font-heading--family);
+    --font-style: normal;
+    --font-weight: var(--font-heading--weight);
   "
   {{ block.shopify_attributes }}
 >
@@ -55,14 +55,17 @@
     class="header-logo__image-container header-logo__image-container--original"
     data-testid="header-logo"
   >
-    {% render 'image',
-      image: settings.logo,
-      class: 'header-logo__image',
-      height: settings.logo_height,
-      alt_text_fallback: alt_text_fallback,
-      text_fallback: shop.name,
-      style: logo_style
-    %}
+    {%- if settings.logo -%}
+      {% render 'image',
+        image: settings.logo,
+        class: 'header-logo__image',
+        height: settings.logo_height,
+        alt_text_fallback: alt_text_fallback,
+        style: logo_style
+      %}
+    {%- else -%}
+      <span style="white-space:nowrap;letter-spacing:0.04em;">Harbour&nbsp;<em style="color:#f4a261;font-style:italic;">Hues</em>&nbsp;Media</span>
+    {%- endif -%}
   </span>
 
   {% if use_inverse_logo %}
