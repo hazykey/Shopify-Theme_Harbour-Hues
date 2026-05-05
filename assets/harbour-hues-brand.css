@@ -1,0 +1,102 @@
+/* Harbour Hues Media — brand overlay
+   Palette: navy #1a4567 | orange #f4a261 | coral #e76f51 | bg #f8f9fa | text #2c3e50
+   Fonts:   Playfair Display (headings) | Inter (body)
+*/
+
+/* ── Section heading accent underline ── */
+.section__heading,
+.section-header__heading,
+h2.title,
+.collection__heading {
+  display: inline-block;
+  padding-bottom: 0.4em;
+  border-bottom: 2px solid #f4a261;
+}
+
+/* ── Playfair italic accent on brand name spans ── */
+.logo__text em,
+.nav-brand em {
+  font-style: italic;
+  color: #f4a261;
+}
+
+/* ── Card hover lift (matches harbourhues.ca portfolio items) ── */
+.card-wrapper,
+.product-card,
+.collection-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-wrapper:hover,
+.product-card:hover,
+.collection-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(26, 69, 103, 0.15);
+}
+
+/* ── Primary button — pill shape & navy fill ── */
+.button,
+.btn,
+button[type="submit"]:not(.shopify-payment-button__button) {
+  border-radius: 50px;
+  letter-spacing: 0.05em;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+.button:hover,
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ── Secondary / outline button ── */
+.button--secondary,
+.button--outline {
+  border-width: 2px;
+  border-radius: 50px;
+}
+
+/* ── Footer background override to HH navy ── */
+.footer,
+footer.footer {
+  background-color: #1a4567;
+  color: #ffffff;
+}
+.footer a,
+footer.footer a {
+  color: #f4a261;
+  transition: color 0.2s;
+}
+.footer a:hover,
+footer.footer a:hover {
+  color: #e76f51;
+}
+
+/* ── Announcement bar & promo banner ── */
+.announcement-bar,
+.announcement-bar__message {
+  background-color: #1a4567;
+  color: #ffffff;
+}
+.announcement-bar a,
+.announcement-bar__message a {
+  color: #f4a261;
+}
+
+/* ── Price / sale accent colour ── */
+.price--on-sale .price__sale,
+.price__badge--sale {
+  color: #e76f51;
+}
+
+/* ── Focus ring using brand colour ── */
+:focus-visible {
+  outline: 2px solid #f4a261;
+  outline-offset: 3px;
+}
+
+/* ── Scrollbar (Chromium) ── */
+::-webkit-scrollbar-thumb {
+  background-color: #1a4567;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background-color: #f8f9fa;
+}
