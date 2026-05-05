@@ -3,6 +3,26 @@
    Fonts:   Playfair Display (headings) | Inter (body)
 */
 
+/* ── Logo wordmark ── */
+.hh-logo-wordmark {
+  font-family: var(--font-heading--family, 'Playfair Display', serif);
+  font-weight: var(--font-heading--weight, 400);
+  font-size: 1em;
+  white-space: nowrap;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: baseline;
+  gap: 0.18em;
+}
+.hh-logo-word {
+  color: var(--color-foreground-heading);
+}
+.hh-logo-hues {
+  color: #f4a261;
+  font-style: italic;
+}
+
 /* ── Section heading accent underline ── */
 .section__heading,
 .section-header__heading,
