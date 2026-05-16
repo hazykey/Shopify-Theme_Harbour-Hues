@@ -17,11 +17,11 @@
         "announcement_BxgCk9": {
           "type": "_announcement",
           "settings": {
-            "text": "Canada-wide free shipping. 🇨🇦",
+            "text": "We’re happy to offer free shipping across Canada. 🇨🇦",
             "link": "",
-            "font": "var(--font-heading--family)",
+            "font": "var(--font-accent--family)",
             "font_size": "1.25rem",
-            "weight": "",
+            "weight": "500",
             "letter_spacing": "tight",
             "case": "none"
           },
